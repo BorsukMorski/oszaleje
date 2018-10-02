@@ -1,0 +1,22 @@
+<h1>Add new user (registration)</h1>
+<h4> User details</h4>
+  <%= form_for(user_new_path) do |f| %>
+  <div class='form-group'>
+    <%= f.text_field :firstName, placeholder: "First name" %>
+    <%= f.text_field :lastName, placeholder: "Last name" %>
+    <%= f.email_field :email, placeholder: "E-mail" %><br />
+    <%= f.date_field :dob, placeholder: "Date of birth" %><br />
+    <%= f.telephone_field :phoneNumber, placeholder: "Phone number" %>
+    <%= f.text_field :userStreet, placeholder: "User street" %>
+    <%= f.text_field :userCity, placeholder: "User city" %><br />
+    <%= f.number_field :userZipCode, placeholder: "User zip code" %>
+    <%= f.text_field :userCountry, placeholder: "User country" %>
+<h4>Company details</h4>
+  <%= f.text_field :companyName, placeholder: "Company name" %><br />
+  <%= f.text_field :companyStreet, placeholder: "Company street" %>
+  <%= f.text_field :companyCity, placeholder: "Company city" %><br />
+  <%= f.number_field :companyZipCode, placeholder: "Company zip code" %>
+  <%= f.text_field :companyCountry, placeholder: "Company country" %>
+ </div>
+ <p><%= submit_tag "DO IT",  class: "btn btn-success"%></p>
+<% end %>
